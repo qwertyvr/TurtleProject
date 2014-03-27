@@ -163,7 +163,7 @@ public class BasicTurtle {
   }
 
   
-  public double wrap() {
+  public void wrap() {
 	  double slope = (ycoord - prevy)/(xcoord - prevx); 
 	  if (xcoord > 400) {
 		  if (slope * 400 + ycoord - slope * xcoord > 400) {
@@ -177,7 +177,6 @@ public class BasicTurtle {
 		  else {
 			  xcoord -= 400;
 			  prevx -= 400;
-			  return prevx;
 		  }
 	  }
 	  else if (xcoord < 0) {
@@ -192,7 +191,6 @@ public class BasicTurtle {
 		  else {
 			  xcoord += 400;
 			  prevx += 400;
-			  return prevx;
 		  }
 	  }
 	  else if (ycoord < 0) {
@@ -203,7 +201,6 @@ public class BasicTurtle {
 		  ycoord -= 400;
 		  prevy -= 400;
 	  }
-	  return prevy;
 	  
   }
   
