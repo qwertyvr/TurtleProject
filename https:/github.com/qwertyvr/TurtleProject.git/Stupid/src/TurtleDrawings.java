@@ -9,6 +9,7 @@ public class TurtleDrawings {
    * where each side is of length "side")
    */      
   public static void Circle (Turtle t, int sides, int size) {
+	  t.pd();
 	  for (int i = 0; i < 20; i++) {
 		 t.rt(18);
 		 t.prevX = t.xcoord;
@@ -19,6 +20,7 @@ public class TurtleDrawings {
 		 }
 		 
 	  }
+	  t.pu();
   }
 
   /**
@@ -64,6 +66,7 @@ public class TurtleDrawings {
    * Use the turtle to draw a Square, where each side is of length "size".  
    */ 
   public static void Square(Turtle t, int size) {
+	  t.pd();
 	  for (int i = 0; i < 4; i++) {
 	     t.lt(90);
 	     t.prevX = t.xcoord;
@@ -73,6 +76,7 @@ public class TurtleDrawings {
 			 t.wrap();
 		 }
 	  }
+	  t.pu();
   }
 
 public static void Rectangle(Turtle t, int i, int j) {
