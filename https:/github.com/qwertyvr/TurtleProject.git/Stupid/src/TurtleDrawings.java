@@ -11,8 +11,8 @@ public class TurtleDrawings {
   public static void Circle (Turtle t, int sides, int size) {
 	  for (int i = 0; i < 20; i++) {
 		 t.rt(18);
-		 t.prevx = t.xcoord;
-		 t.prevy = t.ycoord;
+		 t.prevX = t.xcoord;
+		 t.prevY = t.ycoord;
 		 t.fd(size);
 		 while ((t.xcoord < 0) || (t.xcoord > 400) || (t.ycoord < 0 ) || (t.ycoord > 400)){
 			 t.wrap();
@@ -66,8 +66,8 @@ public class TurtleDrawings {
   public static void Square(Turtle t, int size) {
 	  for (int i = 0; i < 4; i++) {
 	     t.lt(90);
-	     t.prevx = t.xcoord;
-	     t.prevy = t.ycoord;
+	     t.prevX = t.xcoord;
+	     t.prevY = t.ycoord;
 	     t.fd(size);
 	     while ((t.xcoord < 0) || (t.xcoord > 400) || (t.ycoord < 0 ) || (t.ycoord > 400)){
 			 t.wrap();

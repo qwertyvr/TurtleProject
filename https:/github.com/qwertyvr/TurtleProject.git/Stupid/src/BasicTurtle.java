@@ -13,8 +13,8 @@ public class BasicTurtle {
 	public double xcoord;
 	public double ycoord;
 	public int dist;
-	public double prevy;
-	public double prevx;
+	public double prevY;
+	public double prevX;
 
   // Constructors:
  
@@ -164,42 +164,42 @@ public class BasicTurtle {
 
   
   public void wrap() {
-	  double slope = (ycoord - prevy)/(xcoord - prevx); 
+	  double slope = (ycoord - prevY)/(xcoord - prevX); 
 	  if (xcoord > 400) {
 		  if (slope * 400 + ycoord - slope * xcoord > 400) {
 			  ycoord -= 400;
-			  prevy -=400;
+			  prevY -=400;
 		  }
 		  else if (slope * 400 + ycoord - slope * xcoord < 0) {
 			  ycoord += 400;
-			  prevy += 400;
+			  prevY += 400;
 		  }
 		  else {
 			  xcoord -= 400;
-			  prevx -= 400;
+			  prevX -= 400;
 		  }
 	  }
 	  else if (xcoord < 0) {
 		  if (slope * 0 + ycoord - slope * xcoord > 400) {
 			  ycoord -= 400;
-			  prevy -= 400;
+			  prevY -= 400;
 		  }
 		  else if (slope * 0 + ycoord - slope * xcoord < 0) {
 			  ycoord += 400;
-			  prevy += 400;
+			  prevY += 400;
 		  }
 		  else {
 			  xcoord += 400;
-			  prevx += 400;
+			  prevX += 400;
 		  }
 	  }
 	  else if (ycoord < 0) {
 		  ycoord += 400;
-		  prevy += 400;
+		  prevY += 400;
 	  }
 	  else {
 		  ycoord -= 400;
-		  prevy -= 400;
+		  prevY -= 400;
 	  }
 	  
   }
